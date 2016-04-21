@@ -3,7 +3,7 @@
 body{
 	background: url('../images/background.jpg') no-repeat center bottom;
 	background-size: contain;
-	padding: 26px 0px 150px;
+	padding: 26px 0px 15px;
 	line-height: 1.6em;
 }
 a{
@@ -64,4 +64,81 @@ a#logo img {
     white-space: nowrap;
     font-size: 16px;
     background: #B3B3B3;
+}
+
+/* SECTIONS */
+section {
+    padding: 15px 0px;
+}
+section .section-header {
+    background: #000;
+    color: #fff;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+section .section-header .icon {
+    background: #00A0E3;
+    color: #fff;
+    padding: 20px;
+    margin: 0 20px 0 0px;
+    display: inline-block;
+}
+section#pinterest-section .section-header .icon{
+	background: #E31E25;
+}
+section .section-header h1{
+	font-family: 'jenna_sueregular';
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	font-size: 54px;
+	display: inline-block;
+	line-height: 0;
+}
+section .section-header .btn-group{
+	padding: 27px 15px;
+}
+section .section-header .btn-group a{
+	color: #fff;
+	padding: 0 10px;
+}
+
+
+/* FOOTER */
+footer{
+	padding-top: 100px;
+}
+.social {
+    font-size: 37px;
+}
+.social a{
+	margin: 0 15px;
+}
+p.copyright{
+	/* bottom: 0; */
+	position: relative;
+	width: 100%;
+	margin-top: 100px;
+}
+a.backtotop {
+    position: fixed;
+    bottom: 0;
+    right: 100px;
+}
+a.backtotop:hover, a.backtotop:focus {
+    color: #fff;
+    text-decoration: none;
+}
+a.backtotop span {
+    background: silver;
+    margin: 0 0 0 -4px;
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    vertical-align: bottom;
+    height: 54px;
+}
+a.backtotop i {    
+    margin: 0;
+    font-size: 40px;
 }
