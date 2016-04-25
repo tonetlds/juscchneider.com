@@ -32,11 +32,16 @@ a#logo img {
 	 text-transform: uppercase;
 	 font-size: 17px;
 }
+#main-menu.nav>li {
+    display: inline-block;
+    margin: 0 30px;
+}
 #main-menu>li>a {
     position: relative;
     display: block;
-    padding: 10px 15px;
+    padding: 5px 10px;
     /* max-width: 150px; */
+    letter-spacing: 0.55em;
 }
 #main-menu>li>a:hover, #main-menu>li>a:focus {
     text-decoration: none;
@@ -44,7 +49,12 @@ a#logo img {
     color: #fff;
     width: auto;
 }
-
+#main-menu>.dropdown:hover .dropdown-menu {
+    display: block;
+}
+#main-menu>.dropdown:hover {
+    background: #B3B3B3;
+}
 #main-menu>.dropdown .dropdown-menu {
     top: auto;
     left: auto;
@@ -64,6 +74,9 @@ a#logo img {
     white-space: nowrap;
     font-size: 16px;
     background: #B3B3B3;
+}
+#main-menu>.dropdown .dropdown-menu li a:hover{
+    color: #fff;
 }
 
 /* SECTIONS */
