@@ -446,6 +446,20 @@ article .post-content a.read-more:hover {
 }
 
 
+/* CONTATO */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+	font-family: 'jenna_sueregular';
+	font-weight: normal;
+	letter-spacing: 0em;
+	font-size: 36px;
+	padding: 0px 16px;
+	background: #E5E5E5;
+	vertical-align: baseline;
+}
+
+
 /* FOOTER */
 footer{
 	padding-top: 100px;
