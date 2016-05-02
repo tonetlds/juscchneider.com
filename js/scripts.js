@@ -42,7 +42,7 @@ $(document).ready(function() {
 	 */
 	var owl = $(".owl-carousel").owlCarousel({
 	    loop:true,
-	    margin:30,
+	    margin:20,
 	    nav:false,
 	    responsiveClass:true,
 	    responsive:{
@@ -74,7 +74,7 @@ $(document).ready(function() {
 	 */
 	var owl2 = $("#pinterest-carousel").owlCarousel({
 	    loop:true,
-	    margin:30,
+	    margin:20,
 	    nav:false,
 	    responsiveClass:true,
 	    responsive:{

@@ -97,13 +97,13 @@ a#logo img {
 
 /* SECTIONS */
 section {
-    padding: 15px 0px;
+    padding: 20px 0px;
 }
 section .section-header {
     background: #000;
     color: #fff;
     padding: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 section .section-header .icon {
     background: #00A0E3;
@@ -124,7 +124,7 @@ section .section-header h1{
 	line-height: 0;
 }
 section .section-header .btn-group{
-	padding: 27px 15px;
+	padding: 20px 10px;
 }
 section .section-header .btn-group a{
 	color: #C0C0C0;
@@ -147,6 +147,9 @@ section .section-header .btn-group a:hover{
 	text-align: center;
 	/* clear: both; */
 }
+.grid.featured-post {
+	margin-bottom: 20px;
+}
 
 /* Common style */
 .grid figure {
@@ -156,7 +159,7 @@ section .section-header .btn-group a:hover{
 	background: #000000;
 	text-align: center;
 	cursor: pointer;
-	margin-bottom: 30px;
+	margin-bottom: 0px;
 	margin-top: 0px;
 }
 
@@ -512,4 +515,10 @@ a.backtotop i {
 }
 .social i.fa.fa-twitter:hover {
     color: #6DABDE;
+}
+
+/* ADS */
+.adblock img{
+	margin-bottom: 20px;
+	min-height: 210px;
 }
