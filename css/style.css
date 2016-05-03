@@ -103,7 +103,7 @@ section .section-header {
     background: #000;
     color: #fff;
     padding: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 section .section-header .icon {
     background: #00A0E3;
@@ -148,7 +148,7 @@ section .section-header .btn-group a:hover{
 	/* clear: both; */
 }
 .grid.featured-post {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 /* Common style */
@@ -519,6 +519,6 @@ a.backtotop i {
 
 /* ADS */
 .adblock img{
-	margin-bottom: 20px;
-	min-height: 210px;
+	margin-bottom: 10px;
+	min-height: 216px;
 }
