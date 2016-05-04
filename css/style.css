@@ -3,7 +3,7 @@
 body{
 	background: url('../images/background.jpg') no-repeat center bottom;
 	background-size: contain;
-	padding: 26px 0px 15px;
+	padding: 20px 0px 0px;
 	line-height: 1.6em;
 }
 a{
@@ -16,8 +16,8 @@ a:hover, a:focus {
 
 h1, h2, h3, h4, h5, h6{
 	 font-family: 'bodoni_bd_btbold';
-	 letter-spacing: 0.35em;
-	 margin-bottom: 17px;
+	 /* letter-spacing: 0.35em; */
+	 margin-bottom: 15px;
 }
 p {
     font-family: 'open_sansregular';
@@ -29,24 +29,26 @@ nav.menu-section {
     border: none;
 }
 a#logo img {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 #main-menu{
 	 font-family: 'bodoni_bd_btbold';
 	 text-transform: uppercase;
-	 font-size: 17px;
+	 font-size: 16px;
 }
 #main-menu.nav>li {
     /* display: inline-block; */
-    margin: 0 33px;
+    margin: 0 25px;
     display: inline-table;
 }
 #main-menu>li>a {
     position: relative;
-    display: block;
-    padding: 5px 10px;
+    /* display: block; */
+    padding: 5px 5px 5px 15px;
     /* max-width: 150px; */
-    letter-spacing: 0.55em;
+    letter-spacing: 10px;
+    text-align: center;
+    height: 30px;
 }
 #main-menu>li>a .caret {
     display: inline-block;
@@ -108,23 +110,25 @@ section .section-header {
 section .section-header .icon {
     background: #00A0E3;
     color: #fff;
-    padding: 20px;
-    margin: 0 20px 0 0px;
+    padding: 10px;
+    margin: 0 10px 0 0px;
     display: inline-block;
 }
 section#pinterest-section .section-header .icon{
 	background: #E31E25;
 }
 section .section-header h1{
-	font-family: 'jenna_sueregular';
+	/* font-family: 'jenna_sueregular'; */
 	font-weight: 400;
-	letter-spacing: 0.1em;
-	font-size: 54px;
+	/* letter-spacing: 0.22em; */
+	font-size: 28px;
 	display: inline-block;
 	line-height: 0;
+	font-weight: 300;
+	text-transform: uppercase;
 }
 section .section-header .btn-group{
-	padding: 20px 10px;
+	padding: 12px 5px;
 }
 section .section-header .btn-group a{
 	color: #C0C0C0;
@@ -231,7 +235,7 @@ figure.effect-lily img {
 	max-width: none;
 	width: -webkit-calc(100% + 120px);
 	width: calc(100% + 120px);
-	opacity: 0.7;
+	opacity: 1;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-40px,0, 0);
@@ -263,13 +267,16 @@ figure.effect-lily h2 {
 }
 
 figure.effect-lily p {
-	color: rgba(255,255,255,0.8);
+	color: rgba(255,255,255,1);
 	opacity: 0;
 	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
 	transition: opacity 0.2s, transform 0.35s;
 }
 
-figure.effect-lily:hover img,
+figure.effect-lily:hover img{
+	opacity: 0.6;
+}
+
 figure.effect-lily:hover p {
 	opacity: 1;
 }
@@ -296,7 +303,8 @@ figure.effect-ju img {
 	max-width: none;
 	width: -webkit-calc(100% + 50px);
 	width: calc(100% + 50px);
-	opacity: 0.7;
+/* 	opacity: 0.7; */
+	opacity: 1;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-40px,0, 0);
@@ -325,13 +333,15 @@ figure.effect-ju p {
 figure.effect-ju h2 {
 	-webkit-transition: -webkit-transform 0.35s;
 	transition: transform 0.35s;
-	color: rgba(255,255,255,0.8);
+	color: rgba(255,255,255,1);
 	opacity: 0;
 	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
 	transition: opacity 0.2s, transform 0.35s;
 }
 
-figure.effect-ju:hover img,
+figure.effect-ju:hover img{
+	opacity: 0.6;
+}
 figure.effect-ju:hover h2 {
 	opacity: 1;
 }
@@ -483,6 +493,7 @@ a.backtotop {
     position: fixed;
     bottom: 0;
     right: 100px;
+    z-index: 999;
 }
 a.backtotop:hover, a.backtotop:focus {
     color: #fff;

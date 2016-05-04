@@ -6,7 +6,8 @@ $(document).ready(function() {
 	 */
 	if ($('.backtotop').length) {
 	    
-	    var scrollTrigger = window.outerHeight,
+	    // var scrollTrigger = window.outerHeight,
+	    var scrollTrigger = $('header').height() + $('nav.navbar').height();	
 	    
 	    backToTop = function () {
             var scrollTop = $(window).scrollTop();
