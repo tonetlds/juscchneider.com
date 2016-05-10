@@ -1,0 +1,102 @@
+@media (max-width: 767px) {
+	#main-menu.nav>li {
+		/* display: inline-block; */
+		margin: 0 25px;
+		display: block;
+	}
+	#main-menu>li>a {
+		position: relative;
+		/* display: block; */
+		padding: 5px 5px 5px 15px;
+		/* max-width: 150px; */
+		letter-spacing: 10px;
+		text-align: center;
+		height: 30px;
+	}
+	#main-menu>li>a .caret {
+		display: inline-block;
+		width: 0;
+		height: 0;
+		margin-left: 2px;
+		vertical-align: middle;
+		border-top: 4px dashed;
+		border-top: 4px solid \9;
+		border-right: 4px solid transparent;
+		border-left: 4px solid transparent;
+	}
+	#main-menu>li>a:hover, #main-menu>li>a:focus {
+		text-decoration: none;
+		background-color: #B3B3B3;
+		color: #fff;
+		width: auto;
+	}
+	#main-menu>.dropdown:hover .dropdown-menu {
+		display: block;
+	}
+	#main-menu>.dropdown:hover {
+		background: #B3B3B3;
+	}
+	#main-menu>.dropdown .dropdown-menu {
+		top: auto;
+		left: auto;
+		padding: 0;
+		margin: 0;
+		background: #B3B3B3;
+		border: none;
+	}
+	#main-menu>.dropdown .dropdown-menu li a{
+		font-family: 'open_sansregular';
+		display: block;
+		padding: 5px 8px;
+		clear: both;
+		font-weight: 400;
+		line-height: 1.1em;
+		color: #000;
+		white-space: nowrap;
+		font-size: 16px;
+		background: #B3B3B3;
+	}
+	#main-menu>.dropdown .dropdown-menu li a:hover{
+		color: #fff;
+	}	
+
+	/* BLOG SECTION */
+	.grid {
+		position: relative;
+		margin: 0 auto 10px;
+		padding: 0;
+		max-width: 1000px;
+		list-style: none;
+		text-align: center;
+		/* clear: both; */
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	#main-menu.nav>li {
+		/* display: inline-block; */
+		margin: 0 8px;
+		display: inline-table;
+	} 
+	#main-menu>li>a {
+		position: relative;
+		/* display: block; */
+		padding: 5px 5px 5px 15px;
+		/* max-width: 150px; */
+		letter-spacing: 0.5em;
+		text-align: center;
+		height: 30px;
+	}
+	/* BLOG SECTION */
+	.grid {
+		position: relative;
+		margin: 0 auto 10px;
+		padding: 0;
+		max-width: 1000px;
+		list-style: none;
+		text-align: center;
+		/* clear: both; */
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  	
+}

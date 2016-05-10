@@ -16,8 +16,9 @@ a:hover, a:focus {
 
 h1, h2, h3, h4, h5, h6{
 	 font-family: 'bodoni_bd_btbold';
-	 /* letter-spacing: 0.35em; */
+	 letter-spacing: 0.2em;
 	 margin-bottom: 15px;
+	 text-transform: uppercase;
 }
 p {
     font-family: 'open_sansregular';
@@ -120,7 +121,7 @@ section#pinterest-section .section-header .icon{
 section .section-header h1{
 	/* font-family: 'jenna_sueregular'; */
 	font-weight: 400;
-	/* letter-spacing: 0.22em; */
+	letter-spacing: 0.1em;
 	font-size: 28px;
 	display: inline-block;
 	line-height: 0;
@@ -144,7 +145,7 @@ section .section-header .btn-group a:hover{
 /* BLOG SECTION */
 .grid {
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto 0px;
 	padding: 0;
 	max-width: 1000px;
 	list-style: none;
@@ -395,8 +396,8 @@ article .post-content a.read-more:hover {
 /* SIDEBAR */
 .widget{
 	border-bottom: 3px solid #C6C6C6;
-	padding-bottom: 15px;
-	margin-bottom: 15px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
 .widget:last-child{
 	border-bottom: none;
@@ -481,7 +482,7 @@ footer{
     font-size: 30px;
 }
 .social a{
-	margin: 0 25px;
+	margin: 0 22px;
 }
 p.copyright{
 	text-align: center;
@@ -531,5 +532,8 @@ a.backtotop i {
 /* ADS */
 .adblock img{
 	margin-bottom: 10px;
-	min-height: 216px;
+	/* min-height: 216px; */
+}
+.text-center img.img-resposive{	
+	margin: 0 auto;
 }
