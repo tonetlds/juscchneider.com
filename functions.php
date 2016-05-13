@@ -57,3 +57,24 @@ function register_ju_menus() {
 		);
 }
 add_action( 'init', 'register_ju_menus' );
+
+
+/**
+ * 	SIDEBARS
+ */
+function ju_sidebars() {
+
+	$args = array(
+		'id'            => 'sidebar_1',
+		'name'          => __( 'Sidebar', 'ju_scchneider' ),
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'sidebar_2',
+		'name'          => __( 'Sidebar alternativa', 'ju_scchneider' ),
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'ju_sidebars' );

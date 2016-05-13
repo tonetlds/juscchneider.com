@@ -11,9 +11,9 @@
 		</footer>
 
 
-		<a href="#" class="backtotop">
-			<img src="<?php echo get_stylesheet_directory_uri() ?>/images/backtotop_logo.jpg" alt="Back to top">
-			<span><i class="ion-ios-arrow-up fa-3x"></i></span>
+		<a href="#" class="backtotop" style="background-image: url( '<?php echo get_stylesheet_directory_uri() ?>/images/backtotop_logo.jpg' );">
+			<!-- <img src="<?php echo get_stylesheet_directory_uri() ?>/images/backtotop_logo.jpg" alt="Back to top">
+			<span><i class="ion-ios-arrow-up fa-3x"></i></span> -->
 		</a>		
 
 		<?php wp_footer(); ?>

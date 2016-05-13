@@ -43,6 +43,8 @@
 					</div>
 					<div class="col-md-4">
 
+						<?php dynamic_sidebar( 'sidebar_1' ); ?>
+
 						<div class="widget">
 							
 							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/ju_scchneider.jpg" class="img-responsive" alt="Image">

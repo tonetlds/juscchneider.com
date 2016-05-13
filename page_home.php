@@ -43,8 +43,7 @@
 									</a>
 									<!-- <li>
 										<a href="<?php the_permalink() ?>" title="Ver produto <?php the_title_attribute(); ?>"><?php the_title(); ?> <span class="badge"><span class="ion-ios-arrow-right"></span></span></a>
-									</li>										
- 									-->
+									</li> -->
 
 		                        <?php
 		                      endwhile;

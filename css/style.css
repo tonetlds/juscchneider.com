@@ -48,7 +48,8 @@ a#logo img {
     display: inline-table;
 }
 #main-menu>li.current_page_item a{
-	color: #C6C6C6;
+	color: #FFFFFF;
+	background: #000;
 }
 #main-menu>li>a {
     position: relative;
@@ -72,7 +73,7 @@ a#logo img {
 }
 #main-menu>li>a:hover, #main-menu>li>a:focus {
     text-decoration: none;
-    background-color: #B3B3B3;
+    background-color: #000000;
     color: #fff;
     width: auto;
 }
@@ -82,7 +83,11 @@ a#logo img {
 }
 #main-menu>.dropdown:hover,
 #main-menu>.menu-item:hover  {
-    background: #B3B3B3;
+    background: #000000;
+    color: #fff;
+}
+#main-menu>.menu-item:hover a {    
+    color: #fff;
 }
 #main-menu>.dropdown .dropdown-menu, 
 #main-menu>li.menu-item-has-children .sub-menu {
@@ -90,7 +95,7 @@ a#logo img {
     left: auto;
     padding: 0;
     margin: 0;
-    background: #B3B3B3;
+    background: #000000;
     border: none;
 }
 .sub-menu, .dropdown-menu {
@@ -123,10 +128,10 @@ a#logo img {
     clear: both;
     font-weight: 400;
     line-height: 1.1em;
-    color: #000;
+    color: #DEDEDE;
     white-space: nowrap;
     font-size: 16px;
-    background: #B3B3B3;
+    background: #000000;
 }
 #main-menu>.dropdown .dropdown-menu li a:hover,
 #main-menu>.menu-item-has-children .sub-menu li a:hover{
@@ -555,13 +560,14 @@ a.backtotop {
     bottom: 0;
     right: 100px;
     z-index: 999;
-}
-a.backtotop:hover, a.backtotop:focus {
     color: #fff;
-    text-decoration: none;
+    width: 177px;
+    height: 54px;
+    background-position: top;
 }
+
 a.backtotop span {
-    background: silver;
+    background: black;
     margin: 0 0 0 -4px;
     width: 60px;
     display: inline-block;
@@ -570,6 +576,15 @@ a.backtotop span {
     vertical-align: bottom;
     height: 54px;
 }
+a.backtotop:hover span {
+    background: #fff;       
+}
+a.backtotop:hover, a.backtotop:focus {
+    color: #000;
+    text-decoration: none;
+    background-position: bottom;
+}
+
 a.backtotop i {    
     margin: 0;
     font-size: 40px;
