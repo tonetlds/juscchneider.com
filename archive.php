@@ -4,6 +4,9 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
+
+					<h4 class="page-title"><?php echo single_cat_title( '', false ); ?></h4>
+
 						<?php if( have_posts() ) {
 			                      while (have_posts()) : the_post(); ?>
 
@@ -17,12 +20,6 @@
 													<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>												
 											 	<?php }?>
 												
-												<!-- <figcaption>
-													<div>
-														<h2><a href="#">Título</a></h2>
-														<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-													</div>									
-												</figcaption> -->			
 											</figure>
 											
 										</div>

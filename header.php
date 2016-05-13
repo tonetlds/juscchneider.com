@@ -25,51 +25,10 @@
 			</div>
 		</header>
 
-		<nav class="navbar navbar-default menu-section" role="navigation">
-			<div class="container text-center">
-				<ul class="nav nav-justified" id="main-menu">
-					<li>
-						<a href="index.html">Início</a>
-					</li>
-					<li class="dropdown">
-						<a href="blog.html" data-toggle="dropdown disabled" aria-haspopup="true" aria-expanded="false">Blog <b class="caret"></b></a>
-						<ul class="dropdown-menu" aria-labelledby="dLabel">
-							<li>
-								<a href="#">Moda</a>
-							</li>
-							<li>
-								<a href="#">Beleza</a>
-							</li>
-							<li>
-								<a href="#">Comportamento</a>
-							</li>
-							<li>
-								<a href="#">Vídeos</a>
-							</li>
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a href="servicos.html" data-toggle="dropdown disabled" aria-haspopup="true" aria-expanded="false">Serviços <b class="caret"></b></a>
-						<ul class="dropdown-menu" aria-labelledby="dLabel">
-							<li>
-								<a href="#">Consultoria</a>
-							</li>
-							<li>
-								<a href="#">Palestras</a>
-							</li>
-							<li>
-								<a href="#">Produção</a>
-							</li>							
-						</ul>
-					</li>
-					<li>
-						<a href="eu.html">Eu</a>
-					</li>
-					<li>
-						<a href="contato.html">Contato</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-				<script>console.log( '<?php echo basename( get_page_template() ); ?>' );</script>		
+		<div class="container text-center">
+			<?php wp_nav_menu(array( 'theme_location' 	=> 'main-menu',
+									 'container' 		=> 'nav',
+									 'menu_id'			=> 'main-menu',
+									 'menu_class'		=> 'nav nav-justified'
+				 )); ?>
+		</div>		

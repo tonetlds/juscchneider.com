@@ -39,6 +39,21 @@
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 20;
+	return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+/**
+ * Function to register the names of our menus
+ * @return [type] [description]
+ */
+function register_ju_menus() {
+	register_nav_menus(
+		array(
+			'main-menu' => __( 'Menu principal' ),
+			'footer-menu' => __( 'Menu rodapé' )
+			)
+		);
+}
+add_action( 'init', 'register_ju_menus' );

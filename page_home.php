@@ -1,3 +1,4 @@
+<?php /* Template name: Página inicial */ ?>
 <?php get_header() ?>
 
 		<section id="blog-section">
@@ -60,10 +61,9 @@
 
 						<a href="#" class="adblock visible-lg visible-md"><img src="http://placehold.it/336x455/009847/FFFFFF/" alt="" class="img-responsive"></a>						
 
-						<a href="#" class="adblock visible-sm hidden-xs"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>												
-						
+						<a href="#" class="adblock visible-sm hidden-xs"><img src="http://placehold.it/750x200/009847/FFFFFF/" alt="" class="img-responsive"></a>						
 
-						<a href="#" class="adblock hidden-sm visible-xs text-center"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>												
+						<a href="#" class="adblock hidden-sm visible-xs text-center"><img src="http://placehold.it/750x200/009847/FFFFFF/" alt="" class="img-responsive"></a>												
 
 					</div>
 				</div>
@@ -88,23 +88,32 @@
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<div class="grid">
 
+									<?php if (has_post_thumbnail()) {?>	
 										<a href="<?php the_permalink() ?>">
-										<figure class="effect-ju">
-											
-											<?php if (has_post_thumbnail()) {?>												
-												<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>												
-										 	<?php }else{ ?>
-												<img src="http://placehold.it/1036x690/?text=SEM%20IMAGEM" class="img-responsive" alt="Image">
-										 	<?php } ?>
-											
-											<figcaption>
-												<div>
-													<h2><?php the_title() ?></h2>
-												</div>
-											</figcaption>			
-										</figure>
+											<figure class="effect-ju">
+												
+												<?php if (has_post_thumbnail()) {?>												
+													<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>												
+											 	<?php }else{ ?>
+													<img src="http://placehold.it/1036x690/FFFfff/000000/?text=%20" class="img-responsive" alt="Image">
+											 	<?php } ?>
+												
+												<figcaption>
+													<div>
+														<h2><?php the_title() ?></h2>
+													</div>
+												</figcaption>			
+											</figure>
 										</a>
-										
+									<?php }else{ ?>
+										<div class="text-left">
+											<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+											<small><?php the_excerpt(); ?></small>
+											<a href="<?php echo the_permalink(); ?>" class="btn btn-sm btn-default pull-right read-more">Ler mais <i class="ion-ios-plus-empty"></i></a>		
+										</div>
+									<?php } ?>
+
+
 									</div>
 								</div>									
 
@@ -185,15 +194,32 @@
 		<section id="ads-section">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-4">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF?text=ANUNCIANTE" alt="" class="img-responsive"></a>
+					<div class="col-md-4 hidden-sm hidden-xs">
+						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
 					</div>
-					<div class="col-md-4">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF?text=ANUNCIANTE" alt="" class="img-responsive"></a>
+					<div class="col-md-4 hidden-sm hidden-xs">
+						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
 					</div>					
-					<div class="col-md-4">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF?text=ANUNCIANTE" alt="" class="img-responsive"></a>
-					</div>					
+					<div class="col-md-4 hidden-sm hidden-xs">
+						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+					</div>		
+					
+					<div class="col-sm-12 visible-sm">
+						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+					</div>			
+
+					<div class="col-sm-12 visible-xs">
+						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+					</div>			
+
 				</div>
 			</div>
 		</section>
