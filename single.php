@@ -25,9 +25,10 @@
 								}                      			
                       		?>
 														
-                      		<h1 class="text-left"><?php the_title() ?></h1>
-
-
+                      		<h1 class="text-left post-title"><?php the_title() ?></h1>
+                      		<div class="post-meta">
+                                <span class="text-capitalize"><?php the_time('l, d \d\e F \d\e Y'); ?></span> | <span class="text-capitalize">por <?php the_author_posts_link(); ?></span>
+                            </div>
 							
 							<?php if (has_post_thumbnail()) {?>												
 								<div class="grid">

@@ -19,13 +19,22 @@ a:hover, a:focus {
 	padding: 0;
 	margin: 0 0 -10px 0;
 }
+.post-meta {
+    color: #9F9292;
+    /* text-transform: uppercase; */
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.post-title {
+    margin-bottom: 0;
+}
 
 h1, h2, h3, h4, h5, h6{
 	 font-family: 'bodoni_bd_btbold';
-	 letter-spacing: 0.1em;
-	 margin-bottom: 15px;
+	 letter-spacing: 0em;
+	 margin-bottom: 13px;
 	 text-transform: uppercase;
-	 margin-top: 14px;
+	 margin-top: 12px;
 }
 .font-alt{
 	font-family: 'jenna_sueregular';
@@ -467,7 +476,7 @@ article .post-content {
 article .post-content h1 {
     text-transform: uppercase;
     font-size: 45px;
-    letter-spacing: 0.45em;
+    letter-spacing: 0;
 }
 article .post-content a.read-more,
 article a.read-more {
@@ -576,6 +585,10 @@ border-bottom: 3px solid #C6C6C6;
 
 
 /* CONTATO */
+.wpcf7-form input,
+.wpcf7-form textarea,
+.wpcf7-form button,
+.wpcf7-form submit,
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
@@ -586,8 +599,45 @@ border-bottom: 3px solid #C6C6C6;
 	padding: 0px 16px;
 	background: #E5E5E5;
 	vertical-align: baseline;
+    resize: none;
 }
-
+.wpcf7-form .wpcf7-submit {
+	min-width: 130px;
+	display: inline-block;
+	margin-bottom: 0;
+	font-weight: normal;
+	text-align: center;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	padding: 0px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	border-radius: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	font-family: 'jenna_sueregular';
+	font-weight: normal;
+	letter-spacing: 0em;
+	font-size: 36px;
+	background: #E5E5E5;
+	vertical-align: baseline;
+	line-height: 1.3333333;
+	border-radius: 0;
+	color: #333;
+	border-color: #ccc;
+	text-transform: lowercase;
+}
+.wpcf7-form .wpcf7-submit:hover {
+	background-color: #e6e6e6 !important;
+    border-color: #adadad !important;
+}
 
 /* FOOTER */
 footer{
