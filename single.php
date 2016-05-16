@@ -8,10 +8,26 @@
 				<div class="row">
 					<div class="col-md-8">					
 
-                      	<article class="" id="post-<?php the_ID()?>">
-							
-							<?php print_r( wp_get_post_categories( the_ID() ) ); ?>
+                      	<article class="" id="post-<?php the_ID()?>">                      	
+
+                      		<?php
+								$categories = get_the_category();
+								$separator = ', ';
+								$output = '';
+								if ( ! empty( $categories ) ) {
+									$output .= '<h6 class="category">';
+								    foreach( $categories as $key => $category ) {        
+								        $categories[$key] = '<a  class="category" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>';
+								    }
+								    $output .= implode($separator, $categories);
+								    $output .= '</h6>';
+								    echo trim( $output, $separator );
+								}                      			
+                      		?>
+														
                       		<h1 class="text-left"><?php the_title() ?></h1>
+
+
 							
 							<?php if (has_post_thumbnail()) {?>												
 								<div class="grid">
@@ -26,6 +42,14 @@
 						 	<div class="post-content">												
 	                            <?php the_content(); ?>					                        
 							</div>
+
+							<?php
+							// Previous/Próximo post navigation.
+							the_post_navigation( array(
+								'next_text' => '<span class="meta-nav pull-right" aria-hidden="true">' . __( 'Próximo <i class="fa fa-chevron-right"></i>', 'twentysixteen' ) . '</span> ',
+								'prev_text' => '<span class="meta-nav pull-left" aria-hidden="true">' . __( '<i class="fa fa-chevron-left"></i> Anterior', 'twentysixteen' ) . '</span> ',
+							) );
+							?>
 														
 						</article>	                    					                   
 						

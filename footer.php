@@ -6,7 +6,7 @@
 					<a href="#"><i class="fa fa-pinterest"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
 				</div>
-				<p class="copyright"><small>2016 &copy; Juliana Scchneider.</small></p>
+				<p class="copyright"><small><?php echo date('Y') ?> &copy; Juliana Scchneider.</small></p>
 			</div>
 		</footer>
 

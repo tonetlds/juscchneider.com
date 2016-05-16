@@ -67,14 +67,90 @@ function ju_sidebars() {
 	$args = array(
 		'id'            => 'sidebar_1',
 		'name'          => __( 'Sidebar', 'ju_scchneider' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle title">',
+		'after_title'   => '</h3>'
 	);
 	register_sidebar( $args );
 
 	$args = array(
 		'id'            => 'sidebar_2',
 		'name'          => __( 'Sidebar alternativa', 'ju_scchneider' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widgettitle title">',
+		'after_title'   => '</h3>'
 	);
 	register_sidebar( $args );
 
 }
 add_action( 'widgets_init', 'ju_sidebars' );
+
+
+
+/**
+ * POST TYPE SERVIÇO
+ */
+if ( ! function_exists('juscchneider_service_post_type') ) {
+
+// Register Custom Post Type
+function juscchneider_service_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Serviços', 'Post Type General Name', 'ju_scchneider' ),
+		'singular_name'         => _x( 'Serviço', 'Post Type Singular Name', 'ju_scchneider' ),
+		'menu_name'             => __( 'Serviços', 'ju_scchneider' ),
+		'name_admin_bar'        => __( 'Serviços', 'ju_scchneider' ),
+		'archives'              => __( 'Arquivo', 'ju_scchneider' ),
+		'parent_item_colon'     => __( 'Serviço pai:', 'ju_scchneider' ),
+		'all_items'             => __( 'Todos itens', 'ju_scchneider' ),
+		'add_new_item'          => __( 'Adicionar novo serviço', 'ju_scchneider' ),
+		'add_new'               => __( 'Adicionar novo', 'ju_scchneider' ),
+		'new_item'              => __( 'Novo serviço', 'ju_scchneider' ),
+		'edit_item'             => __( 'Editar serviço', 'ju_scchneider' ),
+		'update_item'           => __( 'Atualizar serviço', 'ju_scchneider' ),
+		'view_item'             => __( 'Ver item', 'ju_scchneider' ),
+		'search_items'          => __( 'Procurar item', 'ju_scchneider' ),
+		'not_found'             => __( 'Nada encontrado', 'ju_scchneider' ),
+		'not_found_in_trash'    => __( 'Nada econtrado na lixeira', 'ju_scchneider' ),
+		'featured_image'        => __( 'Imagem em destaque', 'ju_scchneider' ),
+		'set_featured_image'    => __( 'Selecione a imagem em destaque', 'ju_scchneider' ),
+		'remove_featured_image' => __( 'Remover imagem em destaque', 'ju_scchneider' ),
+		'use_featured_image'    => __( 'Usar como imagem em destaque', 'ju_scchneider' ),
+		'insert_into_item'      => __( 'Inserir no serviço', 'ju_scchneider' ),
+		'uploaded_to_this_item' => __( 'Enviado para este item', 'ju_scchneider' ),
+		'items_list'            => __( 'Lista de serviços', 'ju_scchneider' ),
+		'items_list_navigation' => __( 'Lista de serviços', 'ju_scchneider' ),
+		'filter_items_list'     => __( 'Filtrar lista de serviços', 'ju_scchneider' ),
+	);
+	$rewrite = array(
+		'slug'                  => 'servicos',
+		'with_front'            => true,
+		'pages'                 => true,
+		'feeds'                 => true,
+	);
+	$args = array(
+		'label'                 => __( 'Serviço', 'ju_scchneider' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'page-attributes', ),
+		'hierarchical'          => true,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => false,		
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'rewrite'               => $rewrite,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'service', $args );
+
+}
+add_action( 'init', 'juscchneider_service_post_type', 0 );
+
+}

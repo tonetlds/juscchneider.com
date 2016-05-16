@@ -105,10 +105,11 @@
 											</figure>
 										</a>
 									<?php }else{ ?>
-										<div class="text-left">
+										<div class="text-left border-bottom">
 											<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 											<small><?php the_excerpt(); ?></small>
-											<a href="<?php echo the_permalink(); ?>" class="btn btn-sm btn-default pull-right read-more">Ler mais <i class="ion-ios-plus-empty"></i></a>		
+											<!-- <a href="<?php echo the_permalink(); ?>" class="btn btn-sm btn-default pull-right read-more">Ler mais <i class="ion-ios-plus-empty"></i></a> -->
+											<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>
 										</div>
 									<?php } ?>
 
@@ -127,8 +128,6 @@
 			
 		</section>
 
-
-
 		<!-- <section id="gallery-section">
 			<div class="container">
 				<div class="row">
@@ -138,6 +137,64 @@
 				</div>
 			</div>
 		</section> -->
+
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<article>
+							<h2 class="title font-alt">Bella News</h2>
+							<img src="http://placehold.it/1280x720/EE7B07/FFFFFF" alt="" class="img-responsive">						
+							<h3>Título do post</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et unde sint illo sed placeat, doloribus veritatis aperiam ducimus eum natus adipisci qui, consequatur facilis iste quod nostrum delectus corrupti. Nisi.</p>
+							<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>
+						</article>
+					</div>
+					<div class="col-md-6">
+						<article>
+							<h2 class="title font-alt">Beaute</h2>
+							<img src="http://placehold.it/1280x720/EE7B07/FFFFFF" alt="" class="img-responsive">						
+							<h3>Título do post</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit iure et qui veniam, placeat aut illo doloremque autem quam debitis. Fuga culpa, magni dicta necessitatibus delectus vel alias consequuntur praesentium.</p>
+							<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section id="ads-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 hidden-sm hidden-xs">
+						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+					</div>
+					<div class="col-md-4 hidden-sm hidden-xs">
+						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+					</div>					
+					<div class="col-md-4 hidden-sm hidden-xs">
+						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+					</div>		
+					
+					<div class="col-sm-12 visible-sm">
+						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+					</div>			
+
+					<div class="col-sm-12 visible-xs">
+						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						
+						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+					</div>			
+
+				</div>
+			</div>
+		</section>
 
 
 		<section id="instagram-section">
@@ -189,39 +246,7 @@
 				</div>
 			</div>
 		</section>
-
-		<section id="ads-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 hidden-sm hidden-xs">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
-					</div>
-					<div class="col-md-4 hidden-sm hidden-xs">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
-					</div>					
-					<div class="col-md-4 hidden-sm hidden-xs">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
-					</div>		
-					
-					<div class="col-sm-12 visible-sm">
-						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
-					</div>			
-
-					<div class="col-sm-12 visible-xs">
-						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
-					</div>			
-
-				</div>
-			</div>
-		</section>
+		
 
 		<section id="pinterest-section">
 			<div class="container">
