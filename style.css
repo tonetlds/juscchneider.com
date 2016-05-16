@@ -90,6 +90,9 @@ a img.aligncenter {
 }
 
 /* Text meant only for screen readers. */
+.post-navigation{
+	margin-top: 30px;
+}
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;

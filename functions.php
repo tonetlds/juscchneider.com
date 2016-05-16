@@ -89,6 +89,10 @@ add_action( 'widgets_init', 'ju_sidebars' );
 
 
 
+// SUPORTE À IMAGEM DESTACADA
+add_theme_support('post-thumbnails');
+
+
 /**
  * POST TYPE SERVIÇO
  */

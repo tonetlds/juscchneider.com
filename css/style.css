@@ -450,6 +450,14 @@ article {
     padding-bottom: 30px;
     margin-bottom: 0px;
 }
+article.service {
+    border-bottom: 3px solid #C6C6C6;
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+}
+article.service .excerpt{
+    padding-left: 30px;
+}
 article .post-content {
     padding: 0 30px;
 }

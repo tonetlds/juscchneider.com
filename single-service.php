@@ -8,7 +8,8 @@
 				<div class="row">
 					<div class="col-md-8">					
 
-                      	<article class="" id="post-<?php the_ID()?>">                      	
+                      	<article class="" id="post-<?php the_ID()?>">
+                      		<h6 class="category">Serviço</h6>                  	
 
                       		<?php
 								$categories = get_the_category();
