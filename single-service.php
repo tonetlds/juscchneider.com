@@ -59,43 +59,8 @@
 					</div>
 					<div class="col-md-4">
 
-						<div class="widget">
-							
-							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/ju_scchneider.jpg" class="img-responsive" alt="Image">
-
-							<img src="<?php echo get_stylesheet_directory_uri() ?>/images/logo_widget.jpg" class="img-responsive" alt="">	
-
-							<h3></h3>	
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorem, ex natus nisi non deleniti eum voluptate reprehenderit nam corrupti, sunt, vitae vel eos nulla. Excepturi fugit autem quibusdam at.</p>										
-							
-						</div>								
-
-						<div class="widget">
-							
-							<div class="social text-center">
-								<a href="#"><i class="fa fa-facebook"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
-								<a href="#"><i class="fa fa-pinterest"></i></a>
-								<a href="#"><i class="fa fa-twitter"></i></a>
-							</div>							
-
-						</div>
-
-						<div class="widget">
-
-							<h3 class="title">Tags</h3>
-
-							<ul class="tags">
-							    <?php wp_list_categories( array(
-							        'orderby'    => 'name',
-							        'show_count' => false,
-							        'title_li' 	 => ''							                
-							    ) ); ?> 
-							</ul>													
-
-						</div>
-
+						<?php dynamic_sidebar( 'sidebar_1' ); ?>
+						
 						<div class="widget">
 							
 							<a href="#"><img src="http://placehold.it/350x350/009847/FFFFFF?text=ANUNCIANTE" class="img-responsive" alt="Image"></a>

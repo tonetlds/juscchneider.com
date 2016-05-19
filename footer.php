@@ -1,11 +1,16 @@
 		<footer>
 			<div class="container text-center">
-				<div class="btn-group social">
+				
+				<?php if (!is_page( 'contato' )) {
+					dynamic_sidebar( 'sidebar_3' );					
+				} ?>
+
+				<!-- <div class="btn-group social">
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-instagram"></i></a>
 					<a href="#"><i class="fa fa-pinterest"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
-				</div>
+				</div> -->
 				<p class="copyright"><small><?php echo date('Y') ?> &copy; Juliana Scchneider.</small></p>
 			</div>
 		</footer>
@@ -17,6 +22,7 @@
 		</a>		
 
 		<?php wp_footer(); ?>
+		<script>console.log( '<?php echo basename( get_page_template() ); ?>' );</script>
 
 	</body>
 </html>

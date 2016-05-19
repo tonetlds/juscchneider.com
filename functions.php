@@ -84,6 +84,29 @@ function ju_sidebars() {
 	);
 	register_sidebar( $args );
 
+    $args = array(
+        'id'            => 'sidebar_3',
+        'name'          => __( 'Rodapé', 'ju_scchneider' ),
+        'description'   => 'Visível no rodapé de todas as páginas, exceto na página "contato"',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args );
+
+    $args = array(
+        'id'            => 'sidebar_contato',
+        'name'          => __( 'Contato', 'ju_scchneider' ),
+        'description'   => 'Visível apenas na página "contato", no lado direito',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args );
+
+
 }
 add_action( 'widgets_init', 'ju_sidebars' );
 
@@ -91,6 +114,8 @@ add_action( 'widgets_init', 'ju_sidebars' );
 
 // SUPORTE À IMAGEM DESTACADA
 add_theme_support('post-thumbnails');
+// Suporte à resumos em Páginas
+add_post_type_support( 'page', 'excerpt' );
 
 
 /**
@@ -158,3 +183,183 @@ function juscchneider_service_post_type() {
 add_action( 'init', 'juscchneider_service_post_type', 0 );
 
 }
+
+
+
+
+
+class JuOptionsPage
+{
+    /**
+     * Holds the values to be used in the fields callbacks
+     */
+    private $options;
+
+    /**
+     * Start up
+     */
+    public function __construct()
+    {
+        add_action( 'admin_menu', array( $this, 'add_options_page' ) );
+        add_action( 'admin_init', array( $this, 'page_init' ) );
+    }
+
+    /**
+     * Add options page
+     */
+    public function add_options_page()
+    {
+        // This page will be under "Settings"
+        add_menu_page(
+            'Settings Admin', 
+            'Opções', 
+            'manage_options', 
+            'ju-options', 
+            array( $this, 'create_admin_page' )
+        );
+    }
+
+    /**
+     * Options page callback
+     */
+    public function create_admin_page()
+    {
+        // Set class property
+        $this->options = get_option( 'social_networks' );
+        ?>
+        <div class="wrap">
+            <h2>Opções</h2>           
+            <form method="post" action="options.php">
+            <?php
+                // This prints out all hidden setting fields
+                settings_fields( 'ju_options' );   
+                do_settings_sections( 'ju-options' );
+                submit_button(); 
+            ?>
+            </form>
+        </div>
+        <?php
+    }
+
+    /**
+     * Register and add settings
+     */
+    public function page_init()
+    {        
+        register_setting(
+            'ju_options', // Option group
+            'social_networks', // Option name
+            array( $this, 'sanitize' ) // Sanitize
+        );
+
+        add_settings_section(
+            'social_networks_section', // ID
+            'Redes Sociais', // Title
+            array( $this, 'print_section_info' ), // Callback
+            'ju-options' // Page
+        );  
+       
+        add_settings_field(
+            'facebook', 
+            'Facebook', 
+            array( $this, 'facebook_callback' ), 
+            'ju-options', 
+            'social_networks_section'
+        );   
+
+        add_settings_field(
+            'instagram', 
+            'Instagram', 
+            array( $this, 'instagram_callback' ), 
+            'ju-options', 
+            'social_networks_section'
+        );      
+
+        add_settings_field(
+            'pinterest', // ID
+            'Pinterest', // Title 
+            array( $this, 'pinterest_callback' ), // Callback
+            'ju-options', // Page
+            'social_networks_section' // Section           
+        ); 
+
+        add_settings_field(
+            'twitter', // ID
+            'Twitter', // Title 
+            array( $this, 'twitter_callback' ), // Callback
+            'ju-options', // Page
+            'social_networks_section' // Section           
+        );      
+    }
+
+    /**
+     * Sanitize each setting field as needed
+     *
+     * @param array $input Contains all settings fields as array keys
+     */
+    public function sanitize( $input )
+    {
+        $new_input = $input;
+
+        if( isset( $input['id_number'] ) )
+            $new_input['id_number'] = absint( $input['id_number'] );
+
+        if( isset( $input['facebook'] ) )
+            $new_input['facebook'] = sanitize_text_field( $input['facebook'] );        
+
+        return $new_input;
+    }
+
+    /** 
+     * Print the Section text
+     */
+    public function print_section_info()
+    {
+        print 'Informe o seu nome de usuário para cada rede social';
+    }
+
+
+    /** 
+     * Get the settings option array and print one of its values
+     */
+    public function facebook_callback()
+    {
+
+        printf(
+            'http://www.facebook.com/<input type="text" id="facebook" name="social_networks[facebook]" value="%s" />',
+            isset( $this->options['facebook'] ) ? esc_attr( $this->options['facebook']) : ''
+        );
+
+    }
+
+    public function instagram_callback()
+    {
+
+        printf(
+            'http://instagram.com/<input type="text" id="instagram" name="social_networks[instagram]" value="%s" />',
+            isset( $this->options['instagram'] ) ? esc_attr( $this->options['instagram']) : ''
+        );
+
+    }
+
+    public function pinterest_callback()
+    {
+
+        printf(
+            'http://pinterest.com/<input type="text" id="pinterest" name="social_networks[pinterest]" value="%s" />',
+            isset( $this->options['pinterest'] ) ? esc_attr( $this->options['pinterest']) : ''
+        );
+
+    }
+
+    public function twitter_callback()
+    {
+        printf(
+            'http://twitter.com/<input type="text" id="twitter" name="social_networks[twitter]" value="%s" />',
+            isset( $this->options['twitter'] ) ? esc_attr( $this->options['twitter']) : ''
+        );
+    }
+}
+
+if( is_admin() )
+    $ju_options_page = new JuOptionsPage();

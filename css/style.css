@@ -529,32 +529,42 @@ border-bottom: 3px solid #C6C6C6;
 .widget h3.title{
 	background: #1C1B17;
 	color: #fff;
-	padding: 4px 0px;
+	padding: 10px 0px;
 	margin-bottom: 0px;
-	font-family: 'jenna_sueregular';
+	/* font-family: 'jenna_sueregular'; */
 	font-weight: 400;
-	letter-spacing: 0px;
-	font-size: 54px;
+	letter-spacing: 6px;
+	font-size: 20px;
 	text-align: center;
+	margin-top: 0px;
 }
-.widget ul.tags {
-    padding: 20px 10px;
+.widget ul.tags,
+.widget_categories ul {
+    padding: 9px 9px;
+    margin-bottom: 0px;
 }
-.widget ul.tags li{
+.widget ul.tags li,
+.widget_categories ul li{
     list-style: none;
     display: inline-block;
     margin: 4px auto;
 }
+.widget_categories ul li,
 .widget ul.tags li a{
     background: #D6D6D6;
     padding: 5px 10px;
+    margin: 0px 5px 8px 0;
 }
+.widget_categories ul li:hover,
 .widget ul.tags li a:hover,
 .widget ul.tags li a:active,
 .widget ul.tags li a:focus{
 	color: #D6D6D6;
 	background: #1C1B17;
 	padding: 5px 10px;
+}
+.widget_categories ul li:hover a{
+	color: #fff;
 }
 
 
@@ -639,15 +649,37 @@ border-bottom: 3px solid #C6C6C6;
     border-color: #adadad !important;
 }
 
+/* SIDEBAR */
+.sidebar-contato .widget a{
+	border-bottom: 3px solid #C6C6C6;
+    padding-bottom: 20px;
+    margin: 0 0 20px 0;    
+    line-height: 1;
+    display: block;
+
+}
+.sidebar-contato .widget a i{
+	font-size: 50px;
+}
+
+
+
 /* FOOTER */
 footer{
 	padding-top: 100px;
 }
+footer .widget {
+    border-bottom: none;    
+}
+.sidebar-contato .widget a,
+.widget_ju_social_widget,
 .social {
+	text-align: center;
     font-size: 30px;
 }
+.widget_ju_social_widget a,
 .social a{
-	margin: 0 22px;
+	margin: 0 27px;
 }
 p.copyright{
 	text-align: center;
@@ -691,15 +723,19 @@ a.backtotop i {
 }
 
 /* Social links */
+.widget_ju_social_widget i.fa.fa-facebook:hover,
 .social i.fa.fa-facebook:hover {
     color: #455795;
 }
+.widget_ju_social_widget i.fa.fa-instagram:hover,
 .social i.fa.fa-instagram:hover {
     color: #008DD2;
 }
+.widget_ju_social_widget i.fa.fa-pinterest:hover,
 .social i.fa.fa-pinterest:hover {
     color: #E31E25;
 }
+.widget_ju_social_widget i.fa.fa-twitter:hover,
 .social i.fa.fa-twitter:hover {
     color: #6DABDE;
 }
