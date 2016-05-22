@@ -54,7 +54,11 @@
 							) );
 							?>
 														
-						</article>	                    					                   
+						</article>
+
+						<?php get_template_part( 'author-bio' ); ?>
+
+						<?php comments_template(); ?>                   					                   
 						
 					</div>
 					<div class="col-md-4">
