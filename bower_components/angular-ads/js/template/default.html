@@ -1,0 +1,18 @@
+<div class='angular-ads' ng-cloak> 
+	<div class='og-ad' ng-repeat='ad in ads'> 
+		<div class='og-ad-header' ng-class='{adborder:{{!$first}}}'> 
+			<div class='og-ad-headline'>
+				<a ng-href='{{ad.link}}' target='_blank'>{{ad.headline}}</a>
+			</div> 
+			<div class='og-ad-website'>{{webLink(ad.link)}}</div> 
+		</div>  
+		<div class='og-ad-caption'>
+			<div class='og-ad-img'> 
+				<a ng-href='{{ad.link}}' target='_blank'><img ng-src='{{ad.imageUrl}}'></a>
+			</div>
+			<div class='og-ad-text'> 
+				<a ng-href='{{ad.link}}' target='_blank'>{{ad.content.rendered}}</a>
+			</div> 
+		</div> 
+	</div> 
+</div>

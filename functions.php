@@ -64,6 +64,51 @@ add_action( 'init', 'register_ju_menus' );
  */
 function ju_sidebars() {
 
+    $args = array(
+        'id'            => 'sidebar_home_1',
+        'name'          => __( 'Home - Espaço para anúncio 01', 'ju_scchneider' ),
+        'description'   => 'Página inicial, ao lado direito',
+        'before_widget' => '<div id="%1$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => ''
+    );
+    register_sidebar( $args );
+
+    $args = array(
+        'id'            => 'sidebar_home_2',
+        'name'          => __( 'Home - Espaço para anúncio 02', 'ju_scchneider' ),
+        'description'   => 'Visível na página inicial, seção inferior 1 de 3',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args );
+
+    $args = array(
+        'id'            => 'sidebar_home_3',
+        'name'          => __( 'Home - Espaço para anúncio 03', 'ju_scchneider' ),
+        'description'   => 'Visível na página inicial, seção inferior 2 de 3',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args );
+
+        $args = array(
+        'id'            => 'sidebar_home_4',
+        'name'          => __( 'Home - Espaço para anúncio 04', 'ju_scchneider' ),
+        'description'   => 'Visível na página inicial, seção inferior 3 de 3',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args );
+
+
 	$args = array(
 		'id'            => 'sidebar_1',
 		'name'          => __( 'Sidebar', 'ju_scchneider' ),
@@ -85,6 +130,17 @@ function ju_sidebars() {
 	register_sidebar( $args );
 
     $args = array(
+        'id'            => 'sidebar_contato',
+        'name'          => __( 'Contato', 'ju_scchneider' ),
+        'description'   => 'Visível apenas na página "contato", no lado direito',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args ); 
+
+    $args = array(
         'id'            => 'sidebar_3',
         'name'          => __( 'Rodapé', 'ju_scchneider' ),
         'description'   => 'Visível no rodapé de todas as páginas, exceto na página "contato"',
@@ -94,18 +150,6 @@ function ju_sidebars() {
         'after_title'   => '</h3>'
     );
     register_sidebar( $args );
-
-    $args = array(
-        'id'            => 'sidebar_contato',
-        'name'          => __( 'Contato', 'ju_scchneider' ),
-        'description'   => 'Visível apenas na página "contato", no lado direito',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h3 class="widgettitle title">',
-        'after_title'   => '</h3>'
-    );
-    register_sidebar( $args );
-
 
 }
 add_action( 'widgets_init', 'ju_sidebars' );
@@ -176,6 +220,10 @@ function juscchneider_service_post_type() {
 		'publicly_queryable'    => true,
 		'rewrite'               => $rewrite,
 		'capability_type'       => 'page',
+
+        'show_in_rest'          => true,
+        'rest_base'             => 'services',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
 	);
 	register_post_type( 'service', $args );
 

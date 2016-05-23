@@ -1,0 +1,21 @@
+{
+  "name": "angular-ads",
+  "main": [
+    "./js/angular-ad.js",
+    "./css/angular-ads.css"
+  ],
+  "dependencies": {
+    "angular": "~1.2.5"
+  },
+  "homepage": "https://github.com/oojr/angular-ads",
+  "_release": "c4e62cf02d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c4e62cf02ddebb56768c4b484c1eb309687cf614"
+  },
+  "_source": "https://github.com/oojr/angular-ads.git",
+  "_target": "*",
+  "_originalSource": "angular-ads",
+  "_direct": true
+}

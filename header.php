@@ -6,6 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php wp_title() ?></title>
 
+		<!-- include the angular-ads css styles -->
+	    <link href="<?php echo get_stylesheet_directory_uri() ?>/bower_components/angular-ads/css/angular-ads.css" rel="stylesheet">
+	    <!-- include the angular-ads js file -->
+	    <script src="<?php echo get_stylesheet_directory_uri() ?>/bower_components/angular/angular.js" type="text/javascript"></script>
+	    <script src="<?php echo get_stylesheet_directory_uri() ?>/bower_components/angular-ads/js/angular-ads.js" type="text/javascript"></script>	    
+	    <script src="<?php echo get_stylesheet_directory_uri() ?>/js/app.js" type="text/javascript"></script>
+
 		<?php wp_head(); ?>
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -15,7 +22,7 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
-	<body>
+	<body ng-app="app">
 
 		<header>
 			<div class="container text-center">

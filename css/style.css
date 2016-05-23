@@ -744,6 +744,9 @@ a.backtotop i {
 }
 
 /* ADS */
+#ads-section .widget{border: none;padding: 0;margin-bottom: 20px;}
+
+
 .adblock img{
 	margin-bottom: 10px;
 	max-width: 100%;

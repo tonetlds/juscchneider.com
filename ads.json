@@ -1,0 +1,20 @@
+[
+  {
+    "headline": "Headline Text Goes here",
+    "imageUrl": "path/to/ad/image.jpg",
+    "text": "Description Text of the Ad goes here",
+    "link": "http://your-affiliate-link-here.com"
+  },
+  {
+    "headline": "Beyonce - Beyonce",
+    "imageUrl": "img/beyonce.png",
+    "text": "Beyonce made an stealth album with no promotion, wow oh wow",
+    "link": "http://btunes.com/albums/beyonce"
+  },
+  {
+    "headline": "Buy Bitcoins!",
+    "imageUrl": "img/ads/bitcoin.jpg",
+    "text": "pump and dump, pump and dump, pump and dump",
+    "link": "http://pumpandump.com/refer-a-friend"
+  }
+]

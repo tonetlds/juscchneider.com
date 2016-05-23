@@ -20,10 +20,7 @@
                 </div>
 
                 <div class="col-md-4">
-                    <?php dynamic_sidebar( 'sidebar_2' ); ?>
-                    <div class="widget">
-                        <a href="#"><img src="http://placehold.it/350x350/009847/FFFFFF?text=ANUNCIANTE" class="img-responsive" alt="Image"></a>
-                    </div>
+                    <?php dynamic_sidebar( 'sidebar_2' ); ?>                    
                 </div>
             </div>
         </div>

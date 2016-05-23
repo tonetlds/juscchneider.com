@@ -58,11 +58,15 @@
 					</div>
 					<div class="col-md-4">
 
-						<a href="#" class="adblock visible-lg visible-md"><img src="http://placehold.it/336x455/009847/FFFFFF/" alt="" class="img-responsive"></a>						
+						<?php dynamic_sidebar( 'sidebar_home_1' ); ?>
+						
+						<!-- <div og-ads >HERE</div> -->
+
+						<!-- <a href="#" class="adblock visible-lg visible-md"><img src="http://placehold.it/336x455/009847/FFFFFF/" alt="" class="img-responsive"></a>						
 
 						<a href="#" class="adblock visible-sm hidden-xs"><img src="http://placehold.it/750x200/009847/FFFFFF/" alt="" class="img-responsive"></a>						
 
-						<a href="#" class="adblock hidden-sm visible-xs text-center"><img src="http://placehold.it/750x200/009847/FFFFFF/" alt="" class="img-responsive"></a>												
+						<a href="#" class="adblock hidden-sm visible-xs text-center"><img src="http://placehold.it/750x200/009847/FFFFFF/" alt="" class="img-responsive"></a>			 -->									
 
 					</div>
 				</div>
@@ -165,31 +169,29 @@
 		
 		<section id="ads-section">
 			<div class="container">
+			
 				<div class="row">
+					
 					<div class="col-md-4 hidden-sm hidden-xs">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+						<?php dynamic_sidebar( 'sidebar_home_2' ); ?>						
 					</div>
 					<div class="col-md-4 hidden-sm hidden-xs">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+						<?php dynamic_sidebar( 'sidebar_home_3' ); ?>
 					</div>					
 					<div class="col-md-4 hidden-sm hidden-xs">
-						<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" alt="" class="img-responsive"></a>
+						<?php dynamic_sidebar( 'sidebar_home_4' ); ?>
 					</div>		
 					
 					<div class="col-sm-12 visible-sm">
-						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/750x300/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						<?php dynamic_sidebar( 'sidebar_home_2' ); ?>									
+						<?php dynamic_sidebar( 'sidebar_home_3' ); ?>
+						<?php dynamic_sidebar( 'sidebar_home_4' ); ?>
 					</div>			
 
 					<div class="col-sm-12 visible-xs">
-						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
-						
-						<a href="#" class="adblock"><img src="http://placehold.it/336x280/009847/FFFFFF/" alt="" class="img-responsive"></a>
+						<?php dynamic_sidebar( 'sidebar_home_2' ); ?>									
+						<?php dynamic_sidebar( 'sidebar_home_3' ); ?>
+						<?php dynamic_sidebar( 'sidebar_home_4' ); ?>
 					</div>			
 
 				</div>

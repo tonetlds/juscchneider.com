@@ -51,14 +51,7 @@
 					<div class="col-md-4">
 
 						<?php dynamic_sidebar( 'sidebar_1' ); ?>
-						
-
-						<div class="widget">
-							
-							<a href="#"><img src="http://placehold.it/336x280/009847/FFFFFF" class="img-responsive" alt="Image"></a>
-
-						</div>
-
+			
 					</div>
 				</div>
 			</div>
