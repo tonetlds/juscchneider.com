@@ -221,6 +221,10 @@ section .section-header .btn-group a:hover{
 	padding: 0 10px;
 	text-decoration: none;
 }
+/* AUTHOR */
+.archive-header{
+	text-align: center;
+}
 
 /* BLOG SECTION */
 .grid {

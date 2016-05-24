@@ -4,8 +4,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8">
-					
-					<h6 class="category">Categoria</h6>
+										
+						<article>
+							<header class="archive-header">
+									<?php		
+										echo get_avatar( get_the_author_meta( 'user_email' ));
+									?>								
+								<h1 class="archive-title"><?php echo get_the_author() ?></h1>								
+								<?php if ( get_the_author_meta( 'description' ) ) : ?>
+									<div class="author-description"><?php the_author_meta( 'description' ); ?></div>
+								<?php endif; ?>
+								<p>Todos artigos de <?php echo get_the_author() ?></p>
+							</header><!-- .archive-header -->
+						</article>
 					
 					<h1 class="page-title"><?php echo single_cat_title( '', false ); ?></h1>
 

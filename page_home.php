@@ -146,22 +146,67 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<article>
+					<?php
+						$args = array(	                      
+	                      'post_status' 	=> 'publish',
+	                      'posts_per_page' 	=> 1,
+	                      'author'	    	=> 2
+	                    );
+						$posts_parceiros = null;
+	                    $posts_parceiros = new WP_Query($args); // author ID = 1
+						if( $posts_parceiros->have_posts() ) {
+	                      	while ($posts_parceiros->have_posts()) : $posts_parceiros->the_post(); ?>
+								<article>						
+									<h2 class="title font-alt"><?php the_author_posts_link(); ?></h2>
+							 		<?php if (has_post_thumbnail()) {?>		
+							 			<a href="<?php echo the_permalink(); ?>">										
+											<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>								
+										</a>
+								 	<?php } ?>
+							 		<h3><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
+									<p><?php the_excerpt(); ?></p>
+							 		<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>									
+								</article>
+							<?php
+		                      endwhile;
+		                    }
+		                    wp_reset_query();  // Restore global post data stomped by the_post().
+	                    ?>
+						<!-- <article>
 							<h2 class="title font-alt">Bella News</h2>
 							<img src="http://placehold.it/1280x720/EE7B07/FFFFFF" alt="" class="img-responsive">						
 							<h3>Título do post</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et unde sint illo sed placeat, doloribus veritatis aperiam ducimus eum natus adipisci qui, consequatur facilis iste quod nostrum delectus corrupti. Nisi.</p>
 							<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>
-						</article>
+						</article> -->
 					</div>
 					<div class="col-md-6">
-						<article>
-							<h2 class="title font-alt">Beaute</h2>
-							<img src="http://placehold.it/1280x720/EE7B07/FFFFFF" alt="" class="img-responsive">						
-							<h3>Título do post</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit iure et qui veniam, placeat aut illo doloremque autem quam debitis. Fuga culpa, magni dicta necessitatibus delectus vel alias consequuntur praesentium.</p>
-							<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>
-						</article>
+						<?php
+						$args = array(	                      
+	                      'post_status' 	=> 'publish',
+	                      'posts_per_page' 	=> 1,
+	                      'author'	    	=> 3
+	                    );
+						$posts_parceiros = null;
+	                    $posts_parceiros = new WP_Query($args); // author ID = 1
+						if( $posts_parceiros->have_posts() ) {
+	                      	while ($posts_parceiros->have_posts()) : $posts_parceiros->the_post(); ?>
+								<article>						
+									<h2 class="title font-alt"><?php the_author_posts_link(); ?></h2>
+							 		<?php if (has_post_thumbnail()) {?>		
+							 			<a href="<?php echo the_permalink(); ?>">										
+											<?php the_post_thumbnail('full', array('class' => 'img-responsive')); ?>								
+										</a>
+								 	<?php } ?>
+							 		<h3><a href="<?php echo the_permalink(); ?>"><?php the_title(); ?></a></h3>
+									<p><?php the_excerpt(); ?></p>
+							 		<a href="<?php echo the_permalink(); ?>" class="btn btn-sm pull-right read-more"><i class="ion-ios-plus-empty"></i></a>									
+								</article>
+							<?php
+		                      endwhile;
+		                    }
+		                    wp_reset_query();  // Restore global post data stomped by the_post().
+	                    ?>
 					</div>
 				</div>
 			</div>
