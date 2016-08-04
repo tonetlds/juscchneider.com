@@ -9,7 +9,7 @@
                     
 				                    <div class="page-content" id="post-<?php the_ID()?>">		                                
 										
-				                        <div class="post-content">											
+				                        <div class="post-content hyphenate">											
 				                            <?php the_content(); ?>
 				                        </div>
 				                    </div>
@@ -19,7 +19,7 @@
 						?>	
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4 about-sidebar">                	
                     <?php dynamic_sidebar( 'sidebar_2' ); ?>                    
                 </div>
             </div>

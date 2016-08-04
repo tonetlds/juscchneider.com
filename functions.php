@@ -11,7 +11,9 @@
 		wp_enqueue_style( 'main-style', get_template_directory_uri() . '/style.css', array(), null );	    
 		wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), null );	    
 		wp_enqueue_style( 'fonts', get_template_directory_uri() . '/fonts/stylesheet.css', array(), null );	    
-		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), null );	    
+
+        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/font-awesome/css/font-awesome.min.css', array(), null );        		
+
 		wp_enqueue_style( 'ionicons', get_template_directory_uri() . '/css/ionicons.min.css', array(), null );	    
 		wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/js/assets/owl.carousel.css', array(), null );	    
 		wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/style.css', array(), null );	    
@@ -23,8 +25,9 @@
 	     */
 	    // wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.12.3.min.js', array(), null, true );
 	    wp_enqueue_script( 'jquery' );
-	    wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), null, true );
-	    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), null, true );
+        wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), null, true );
+	    wp_enqueue_script( 'instafeedjs', get_template_directory_uri() . '/bower_components/instafeed.js/instafeed.min.js', array('jquery'), null, true );
+	    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), null, true );        
 	    wp_enqueue_script( 'main-script', get_template_directory_uri() . '/js/scripts.js', array('jquery'), null, true );
 
 	}
@@ -63,6 +66,17 @@ add_action( 'init', 'register_ju_menus' );
  * 	SIDEBARS
  */
 function ju_sidebars() {
+    
+    $args = array(
+        'id'            => 'colunistas',
+        'name'          => __( 'Colunistas', 'ju_scchneider' ),
+        'description'   => 'Seção para colunistas - Página inicial',
+        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widgettitle title">',
+        'after_title'   => '</h3>'
+    );
+    register_sidebar( $args );
 
     $args = array(
         'id'            => 'sidebar_home_1',
