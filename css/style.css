@@ -353,7 +353,7 @@ figure.effect-lily img {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(-40px,0, 0);
 	transform: translate3d(-40px,calc(-2%),0);
-	margin-top: calc(-50%);
+	/* margin-top: calc(-50%); */
 }
 
 figure.effect-lily figcaption {
@@ -492,7 +492,6 @@ figure.effect-ju:hover p {
 	position: inherit;
 }
 article {
-    border-bottom: 3px solid #C6C6C6;
     padding-bottom: 30px;
     margin-bottom: 0px;
 }
