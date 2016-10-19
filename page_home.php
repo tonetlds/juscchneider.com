@@ -191,6 +191,7 @@
 
 		<div class="row">
 
+			<!-- 3 Colunas em telas grandes -->
 			<div class="col-md-4 hidden-sm hidden-xs">
 				<?php dynamic_sidebar( 'sidebar_home_2' ); ?>
 			</div>
@@ -201,12 +202,14 @@
 				<?php dynamic_sidebar( 'sidebar_home_4' ); ?>
 			</div>
 
+			<!-- 1 Coluna e 3 Linhas em telas -->
 			<div class="col-sm-12 visible-sm">
 				<?php dynamic_sidebar( 'sidebar_home_2' ); ?>
 				<?php dynamic_sidebar( 'sidebar_home_3' ); ?>
 				<?php dynamic_sidebar( 'sidebar_home_4' ); ?>
 			</div>
 
+			<!-- 1 Coluna e 3 Linhas em celulares -->
 			<div class="col-sm-12 visible-xs">
 				<?php dynamic_sidebar( 'sidebar_home_2' ); ?>
 				<?php dynamic_sidebar( 'sidebar_home_3' ); ?>
@@ -215,6 +218,19 @@
 
 		</div>
 	</div>
+
+	<div class="container">
+		<div class="row">
+
+			<!-- 1 Coluna (large ad) -->
+			<div class="col-sm-12 text-center">
+				<!-- <img src="http://placehold.it/960x280/B3B3B3/FFFFFF?text='AD HERE'" alt="" class="img-responsive"> -->
+				<?php dynamic_sidebar( 'sidebar_home_5' ); ?>
+			</div>
+
+		</div>
+	</div>
+
 </section>
 
 
